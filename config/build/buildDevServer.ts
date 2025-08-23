@@ -5,5 +5,6 @@ export default function buildDevServer(options: IBuildOptions): DevServerConfigu
   return {
     port: options.port,
     open: true,
+    historyApiFallback: true,
   }
 };
