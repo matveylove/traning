@@ -25,5 +25,6 @@ export interface IBuildOptions {
   isDev: boolean;
   devtool: string;
   port: number
+  src: string;
 }
 

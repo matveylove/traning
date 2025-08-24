@@ -5,6 +5,19 @@ import { IBuildOptions } from './types/config';
 export default function buildRules(options: IBuildOptions): webpack.RuleSetRule[] {
   return [
     {
+      test: /\.(png|jpe?g|gif)$/i,
+      use: [
+        {
+          loader: 'file-loader',
+        },
+      ],
+    },
+    {
+      test: /\.svg$/i,
+      issuer: /\.[jt]sx?$/,
+      use: ['@svgr/webpack'],
+    },
+    {
       test: /\.s[ac]ss$/i,
       use: [
         options.isDev ? 'style-loader' : MiniCssExtractPlugin.loader,

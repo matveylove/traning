@@ -19,7 +19,7 @@ export function buildWebpackConfig(options: IBuildOptions): webpack.Configuratio
     module: {
       rules: buildRules(options),
     },
-    resolve: buildResolves(),
+    resolve: buildResolves(options),
     devtool: devtool,
     devServer: isDev ? buildDevServer(options) : undefined,
   };

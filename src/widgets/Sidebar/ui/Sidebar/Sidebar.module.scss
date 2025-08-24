@@ -1,0 +1,17 @@
+.sidebar {
+  width: var(--sidebar-close-width);
+  height: calc(100vh - var(--navbar-height));
+  position: relative;
+  top: 0;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  background-color: var(--sidebar-bg-color);
+  color: var(--sidebar-color);
+}
+
+.collapsed{
+  width: var(--sidebar-open-width) !important;
+}

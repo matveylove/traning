@@ -6,6 +6,7 @@ import { IBuildEnv } from './config/build/types/config';
 export default (env: IBuildEnv) => {
 
   const templatePath = path.resolve(__dirname, 'public', 'index.html');
+  const src = path.resolve(__dirname, 'src');
 
   const output: IOutputConfig = {
     path: path.resolve(__dirname, 'dist'),
@@ -25,5 +26,6 @@ export default (env: IBuildEnv) => {
     isDev,
     port: PORT,
     devtool: isDev ? 'inline-source-map' : undefined,
+    src,
   });
 };
