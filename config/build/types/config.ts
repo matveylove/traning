@@ -9,6 +9,7 @@ export interface IBuildEnv {
 
 export interface IBuildPlugins {
   templatePath: string;
+  isDev: boolean;
 }
 
 export interface IOutputConfig {

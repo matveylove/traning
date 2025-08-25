@@ -1,8 +1,11 @@
 import React from 'react';
+import TranslateText from 'shared/hocs/TranslateText';
 
 function MainPage() {
   return (
-    <div>Main Page</div>
+    <TranslateText nameSpace={'main'}>
+      Главая страница
+    </TranslateText>
   );
 }
 

@@ -15,6 +15,7 @@ export function buildWebpackConfig(options: IBuildOptions): webpack.Configuratio
 
     plugins: buildPlugins({
       templatePath,
+      isDev,
     }),
     module: {
       rules: buildRules(options),
